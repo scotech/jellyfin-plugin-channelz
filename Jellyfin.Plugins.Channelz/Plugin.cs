@@ -26,7 +26,7 @@ public class Plugin : BasePlugin<PluginConfiguration>, IHasWebPages
     }
 
     /// <inheritdoc />
-    public override string Name => "Template";
+    public override string Name => "Channelz";
 
     /// <inheritdoc />
     public override Guid Id => Guid.Parse("84978100-fe55-454e-b566-44b7f4e8a400");
