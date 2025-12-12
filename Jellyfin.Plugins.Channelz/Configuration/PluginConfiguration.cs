@@ -1,6 +1,6 @@
 using MediaBrowser.Model.Plugins;
 
-namespace Jellyfin.Plugin.Template.Configuration;
+namespace Jellyfin.Plugins.Channelz.Configuration;
 
 /// <summary>
 /// The configuration options.
