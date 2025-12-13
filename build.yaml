@@ -13,3 +13,4 @@ artifacts:
 - "Jellyfin.Plugins.Channelz.dll"
 changelog: >
   changelog
+imageURL: "https://raw.githubusercontent.com/scotech/jellyfin-plugin-channelz/refs/heads/master/images/icon.png"
