@@ -37,33 +37,36 @@ echo MY="${MY}"
 JPRM="python -m jprm"
 echo JPRM="${JPRM}"
 DEFAULT_REPO_DIR="${MY}"
-echo DEFAULT_REPO_DIR
+echo DEFAULT_REPO_DIR="${DEFAULT_REPO_DIR}"
 DEFAULT_REPO_URL="https://github.com/scotech/jellyfin-plugin-channelz"
-echo DEFAULT_REPO_DIR
+echo DEFAULT_REPO_URL="${DEFAULT_REPO_URL}"
 PLUGIN=${1:-${PLUGIN:-.}}
-echo PLUGIN
+echo PLUGIN="${PLUGIN}"
 ARTIFACT_DIR=${ARTIFACT_DIR:-"${MY}/artifacts"}
-echo ARTIFACT_DIR
+echo ARTIFACT_DIR="${ARTIFACT_DIR}"
 mkdir -p "${ARTIFACT_DIR}"
-
+ARTIFACT_DIR="./artifacts"
 JELLYFIN_REPO=${JELLYFIN_REPO:-${DEFAULT_REPO_DIR}}
+echo JELLYFIN_REPO="${JELLYFIN_REPO}"
 JELLYFIN_REPO_URL=${JELLYFIN_REPO_URL:-${DEFAULT_REPO_URL}}
-
+echo JELLYFIN_REPO_URL="${JELLYFIN_REPO_URL}"
 # Each segment of the version is a 16bit number.
 # Max number is 65535.
 VERSION_SUFFIX=${VERSION_SUFFIX:-$(date -u +%y%m.%d%H.%M%S)}
-
+echo VERSION_SUFFIX="${VERSION_SUFFIX}"
 meta_version=$(grep -Po '^ *version: * "*\K[^"$]+' "${PLUGIN}/build.yaml")
+echo meta_version="${meta_version}"
 VERSION=${VERSION:-$(echo $meta_version | sed 's/\.[0-9]*\.[0-9]*\.[0-9]*$/.'"$VERSION_SUFFIX"'/')}
-
+echo VERSION="${VERSION}"
 # !!! VERSION IS OVERWRITTEN HERE
 VERSION="${meta_version}"
-
+echo VERSION="${VERSION}"
 echo "${PLUGIN}"
 
 find "${PLUGIN}" -name project.assets.json -exec rm -v '{}' ';'
-
-zipfile=$($JPRM --verbosity=debug plugin build "${PLUGIN}" --output="${ARTIFACT_DIR}" --version="${VERSION}") && {
-    $JPRM --verbosity=debug repo add --url=${JELLYFIN_REPO_URL} "${JELLYFIN_REPO}" "${zipfile}"
-}
+# echo "${($JPRM --verbosity=debug plugin build "${PLUGIN}" --output="${ARTIFACT_DIR}" --version="${VERSION}")}"
+zipfile=$($JPRM --verbosity=debug plugin build "${PLUGIN}" --output="${ARTIFACT_DIR}" --version="${VERSION}")
+# && {
+ #   $JPRM --verbosity=debug repo add --url=${JELLYFIN_REPO_URL} "${JELLYFIN_REPO}" "${zipfile}"
+#}
 exit $?
