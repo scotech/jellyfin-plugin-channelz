@@ -8,7 +8,7 @@ overview: "Live TV using your own libraries"
 description: >
   Live TV Channels in Jellyfin from your own library allowing direct play
 category: "Live TV"
-owner: "jellyfin"
+owner: "scotech"
 artifacts:
 - "Jellyfin.Plugins.Channelz.dll"
 changelog: >

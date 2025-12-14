@@ -33,14 +33,17 @@
 #
 
 MY=$(dirname $(realpath -s "${0}"))
-JPRM="python3.exe -m jprm"
-
+echo MY="${MY}"
+JPRM="python -m jprm"
+echo JPRM="${JPRM}"
 DEFAULT_REPO_DIR="${MY}"
+echo DEFAULT_REPO_DIR
 DEFAULT_REPO_URL="https://github.com/scotech/jellyfin-plugin-channelz"
-
+echo DEFAULT_REPO_DIR
 PLUGIN=${1:-${PLUGIN:-.}}
-
+echo PLUGIN
 ARTIFACT_DIR=${ARTIFACT_DIR:-"${MY}/artifacts"}
+echo ARTIFACT_DIR
 mkdir -p "${ARTIFACT_DIR}"
 
 JELLYFIN_REPO=${JELLYFIN_REPO:-${DEFAULT_REPO_DIR}}
