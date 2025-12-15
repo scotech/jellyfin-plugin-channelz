@@ -4,6 +4,9 @@ using System.Globalization;
 using Jellyfin.Plugins.Channelz.Configuration;
 using MediaBrowser.Common.Configuration;
 using MediaBrowser.Common.Plugins;
+using MediaBrowser.Controller.Channels;
+using MediaBrowser.Controller.Library;
+using MediaBrowser.Model.Channels;
 using MediaBrowser.Model.Plugins;
 using MediaBrowser.Model.Serialization;
 
@@ -47,5 +50,10 @@ public class Plugin : BasePlugin<PluginConfiguration>, IHasWebPages
                 EmbeddedResourcePath = string.Format(CultureInfo.InvariantCulture, "{0}.Configuration.configPage.html", GetType().Namespace)
             }
         ];
+    }
+
+    public IEnumerable<Channel> GetChannels()
+    {
+        yield return new DummyChannel();  // We'll create this next
     }
 }
