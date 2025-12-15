@@ -1,5 +1,7 @@
 # So you want to make a Jellyfin plugin
 
+https://raw.githubusercontent.com/scotech/jellyfin-plugin-channelz/refs/heads/master/manifest.json
+
 Awesome! This guide is for you. Jellyfin plugins are written using the dotnet standard framework. What that means is you can write them in any language that implements the CLI or the DLI and can compile to net8.0. The examples on this page are in C# because that is what most of Jellyfin is written in, but F#, Visual Basic, and IronPython should all be compatible once compiled.
 
 ## 0. Things you need to get started
@@ -78,11 +80,11 @@ You can call it whatever you'd like really. This class is used to hold settings 
 It should look something like the following:
 ```c#
     using MediaBrowser.Model.Plugins;
-    
+
     namespace MyJellyfinPlugin.Configuration;
     class PluginConfiguration : BasePluginConfiguration
     {
-        
+
     }
 ```
 
@@ -94,12 +96,12 @@ It should look something like the following:
 ```c#
     using MediaBrowser.Common.Plugins;
     using MyJellyfinPlugin.Configuration;
-    
+
     namespace MyJellyfinPlugin;
-    
+
     class Plugin : BasePlugin<PluginConfiguration>
     {
-        
+
     }
 ```
 
