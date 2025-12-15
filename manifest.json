@@ -13,8 +13,8 @@
                 "changelog": "changelog\n",
                 "targetAbi": "10.11.4.0",
                 "sourceUrl": "https://raw.githubusercontent.com/scotech/jellyfin-plugin-channelz/refs/heads/master/channelz/channelz_1.0.3.0.zip",
-                "checksum": "fd6d9edb1a9a67802b87e52ad76a23b1",
-                "timestamp": "2025-12-15T15:11:21Z"
+                "checksum": "719eeb8ad7c6ee61c62631c149e8a8ca",
+                "timestamp": "2025-12-15T15:37:19Z"
             },
             {
                 "version": "1.0.2.0",
