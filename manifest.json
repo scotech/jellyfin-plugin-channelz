@@ -6,7 +6,16 @@
         "overview": "Live TV using your own libraries",
         "owner": "scotech",
         "category": "Live TV",
+        "imageUrl": "https://raw.githubusercontent.com/scotech/jellyfin-plugin-channelz/refs/heads/master/images/icon.png",
         "versions": [
+            {
+                "version": "1.0.1.0",
+                "changelog": "changelog\n",
+                "targetAbi": "10.11.4.0",
+                "sourceUrl": "https://raw.githubusercontent.com/scotech/jellyfin-plugin-channelz/refs/heads/master/channelz/channelz_1.0.1.0.zip",
+                "checksum": "54cfd35a6df38e1ced320a89dc67750d",
+                "timestamp": "2025-12-15T04:50:33Z"
+            },
             {
                 "version": "1.0.0.0",
                 "changelog": "changelog\n",
@@ -15,7 +24,6 @@
                 "checksum": "c8f7330de71286470802996722f2b3cd",
                 "timestamp": "2025-12-15T03:31:45Z"
             }
-        ],
-        "imageUrl": "https://raw.githubusercontent.com/scotech/jellyfin-plugin-channelz/refs/heads/master/images/icon.png"
+        ]
     }
 ]
