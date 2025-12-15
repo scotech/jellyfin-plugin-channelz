@@ -9,6 +9,14 @@
         "imageUrl": "https://raw.githubusercontent.com/scotech/jellyfin-plugin-channelz/refs/heads/master/images/icon.png",
         "versions": [
             {
+                "version": "1.0.2.0",
+                "changelog": "changelog\n",
+                "targetAbi": "10.11.4.0",
+                "sourceUrl": "https://raw.githubusercontent.com/scotech/jellyfin-plugin-channelz/refs/heads/master/channelz/channelz_1.0.2.0.zip",
+                "checksum": "f9259e66966f6a21c6555fabad9d4cc4",
+                "timestamp": "2025-12-15T05:09:49Z"
+            },
+            {
                 "version": "1.0.1.0",
                 "changelog": "changelog\n",
                 "targetAbi": "10.11.4.0",
