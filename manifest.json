@@ -5,16 +5,24 @@
         "description": "Live TV Channels in Jellyfin from your own library allowing direct play\n",
         "overview": "Live TV using your own libraries",
         "owner": "scotech",
-        "category": "Live TV",
+        "category": "livetv",
         "imageUrl": "https://raw.githubusercontent.com/scotech/jellyfin-plugin-channelz/refs/heads/master/images/icon.png",
         "versions": [
+            {
+                "version": "1.0.3.0",
+                "changelog": "changelog\n",
+                "targetAbi": "10.11.4.0",
+                "sourceUrl": "https://raw.githubusercontent.com/scotech/jellyfin-plugin-channelz/refs/heads/master/channelz/channelz_1.0.3.0.zip",
+                "checksum": "fd6d9edb1a9a67802b87e52ad76a23b1",
+                "timestamp": "2025-12-15T15:11:21Z"
+            },
             {
                 "version": "1.0.2.0",
                 "changelog": "changelog\n",
                 "targetAbi": "10.11.4.0",
                 "sourceUrl": "https://raw.githubusercontent.com/scotech/jellyfin-plugin-channelz/refs/heads/master/channelz/channelz_1.0.2.0.zip",
-                "checksum": "f9259e66966f6a21c6555fabad9d4cc4",
-                "timestamp": "2025-12-15T05:09:49Z"
+                "checksum": "1adb5cf542082230a1388e8a5e36d19d",
+                "timestamp": "2025-12-15T15:04:23Z"
             },
             {
                 "version": "1.0.1.0",
